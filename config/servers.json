@@ -1,0 +1,386 @@
+{
+  "exa": {
+    "command": "node",
+    "args": [
+      "/Users/estiens/.nvm/versions/node/v23.6.0/lib/node_modules/exa-mcp-server/build/index.js"
+    ],
+    "env": {
+      "EXA_API_KEY": "${EXA_API_KEY}"
+    },
+    "required_env": [
+      "EXA_API_KEY"
+    ],
+    "description": "Semantic web search using Exa API."
+  },
+  "fetch": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-fetch"
+    ],
+    "env": {},
+    "required_env": [],
+    "description": "Fetches URLs and extracts content as markdown or HTML."
+  },
+  "a11y": {
+    "command": "npx",
+    "args": [
+      "a11y-mcp"
+    ],
+    "env": {},
+    "required_env": [],
+    "description": "Accessibility testing and reporting."
+  },
+  "playwright": {
+    "command": "npx",
+    "args": [
+      "@playwright/mcp@latest"
+    ],
+    "env": {},
+    "required_env": [],
+    "description": "Browser automation for web testing and interaction."
+  },
+  "cyber_chitta": {
+    "command": "uvx",
+    "args": [
+      "--from",
+      "llm-context",
+      "lc-mcp"
+    ],
+    "env": {},
+    "required_env": [],
+    "description": "Context extraction and processing tools."
+  },
+  "slack": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@modelcontextprotocol/server-slack"
+    ],
+    "env": {
+      "SLACK_BOT_TOKEN": "${SLACK_BOT_TOKEN}",
+      "SLACK_TEAM_ID": "${SLACK_TEAM_ID}",
+      "SLACK_CHANNEL_IDS": "${SLACK_CHANNEL_IDS}"
+    },
+    "required_env": [
+      "SLACK_BOT_TOKEN",
+      "SLACK_TEAM_ID",
+      "SLACK_CHANNEL_IDS"
+    ],
+    "description": "Slack integration for channel monitoring and messaging."
+  },
+  "github": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@modelcontextprotocol/server-github"
+    ],
+    "env": {
+      "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+    },
+    "required_env": [
+      "GITHUB_PERSONAL_ACCESS_TOKEN"
+    ],
+    "description": "GitHub integration for repository access and management."
+  },
+  "git": {
+    "command": "npx",
+    "args": [
+      "@cyanheads/git-mcp-server"
+    ],
+    "env": {},
+    "required_env": [],
+    "description": "Git operations and repository management."
+  },
+  "airtable": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "airtable-mcp-server"
+    ],
+    "env": {
+      "AIRTABLE_API_KEY": "${AIRTABLE_API_KEY}"
+    },
+    "required_env": [
+      "AIRTABLE_API_KEY"
+    ],
+    "description": "Airtable integration for database operations."
+  },
+  "todos": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@supabase/mcp-server-postgrest@latest",
+      "--apiUrl",
+      "${SUPABASE_API_URL}",
+      "--apiKey",
+      "${SUPABASE_API_KEY}",
+      "--schema",
+      "public"
+    ],
+    "env": {},
+    "required_env": [
+      "SUPABASE_API_URL",
+      "SUPABASE_API_KEY"
+    ],
+    "description": "Todo management with Supabase PostgREST backend."
+  },
+  "lighthouse": {
+    "command": "npx",
+    "args": [
+      "lighthouse-mcp"
+    ],
+    "env": {},
+    "required_env": [],
+    "description": "Website performance and accessibility auditing."
+  },
+  "qdrant": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-qdrant"
+    ],
+    "env": {
+      "QDRANT_URL": "${QDRANT_URL}",
+      "QDRANT_API_KEY": "${QDRANT_API_KEY}",
+      "COLLECTION_NAME": "${QDRANT_COLLECTION_NAME}",
+      "EMBEDDING_MODEL": "sentence-transformers/all-MiniLM-L6-v2"
+    },
+    "required_env": [
+      "QDRANT_URL",
+      "QDRANT_API_KEY",
+      "QDRANT_COLLECTION_NAME"
+    ],
+    "description": "Vector database integration for semantic search."
+  },
+  "n8n": {
+    "command": "npx",
+    "args": [
+      "@n8n/mcp@latest"
+    ],
+    "env": {
+      "N8N_API_URL": "${N8N_API_URL}",
+      "N8N_API_KEY": "${N8N_API_KEY}"
+    },
+    "required_env": [
+      "N8N_API_URL",
+      "N8N_API_KEY"
+    ],
+    "description": "Workflow automation for integrating services and APIs."
+  },
+  "redis": {
+    "command": "npx",
+    "args": [
+      "@gongrzhe/server-redis-mcp@1.0.0",
+      "${REDIS_URL}"
+    ],
+    "env": {},
+    "required_env": [
+      "REDIS_URL"
+    ],
+    "description": "Redis database operations and caching."
+  },
+  "docker": {
+    "command": "npx",
+    "args": [
+      "@beaussan/docker-mcp"
+    ],
+    "env": {},
+    "required_env": [],
+    "description": "Docker container management and operations."
+  },
+  "mermaid": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@rtuin/mcp-mermaid-validator"
+    ],
+    "env": {},
+    "required_env": [],
+    "description": "Diagram generation and visualization using Mermaid syntax."
+  },
+  "postgres": {
+    "command": "npx",
+    "args": [
+      "postgres-mcp"
+    ],
+    "env": {
+      "POSTGRES_CONNECTION_STRING": "${POSTGRES_CONNECTION_STRING}"
+    },
+    "required_env": [
+      "POSTGRES_CONNECTION_STRING"
+    ],
+    "description": "PostgreSQL database operations and queries."
+  },
+  "api_spec": {
+    "command": "npx",
+    "args": [
+      "openapi-mcp"
+    ],
+    "env": {},
+    "required_env": [],
+    "description": "OpenAPI specification generation and validation."
+  },
+  "figma": {
+    "command": "npx",
+    "args": [
+      "figma-mcp"
+    ],
+    "env": {
+      "FIGMA_ACCESS_TOKEN": "${FIGMA_ACCESS_TOKEN}"
+    },
+    "required_env": [
+      "FIGMA_ACCESS_TOKEN"
+    ],
+    "description": "Figma design retrieval and operations."
+  },
+  "aws": {
+    "command": "npx",
+    "args": [
+      "aws-mcp"
+    ],
+    "env": {
+      "AWS_ACCESS_KEY_ID": "${AWS_ACCESS_KEY_ID}",
+      "AWS_SECRET_ACCESS_KEY": "${AWS_SECRET_ACCESS_KEY}",
+      "AWS_REGION": "${AWS_REGION}"
+    },
+    "required_env": [
+      "AWS_ACCESS_KEY_ID",
+      "AWS_SECRET_ACCESS_KEY",
+      "AWS_REGION"
+    ],
+    "description": "AWS services management and operations."
+  },
+  "terraform": {
+    "command": "npx",
+    "args": [
+      "terraform-mcp"
+    ],
+    "env": {},
+    "required_env": [],
+    "description": "Infrastructure as code operations using Terraform."
+  },
+  "docs_rag": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@kazuph/mcp-docs-rag"
+    ],
+    "env": {
+      "DOCS_PATH": "${DOCS_PATH}",
+      "GEMINI_API_KEY": "${GEMINI_API_KEY}"
+    },
+    "required_env": [
+      "DOCS_PATH",
+      "GEMINI_API_KEY"
+    ],
+    "description": "Documentation RAG (Retrieval Augmented Generation) for knowledge base access."
+  },
+  "lint": {
+    "command": "npx",
+    "args": [
+      "lint-mcp"
+    ],
+    "env": {},
+    "required_env": [],
+    "description": "Code linting and style checking."
+  },
+  "cypress": {
+    "command": "npx",
+    "args": [
+      "cypress-mcp"
+    ],
+    "env": {},
+    "required_env": [],
+    "description": "Web application testing with Cypress."
+  },
+  "jira": {
+    "command": "npx",
+    "args": [
+      "jira-mcp"
+    ],
+    "env": {
+      "JIRA_API_TOKEN": "${JIRA_API_TOKEN}",
+      "JIRA_USER_EMAIL": "${JIRA_USER_EMAIL}",
+      "JIRA_BASE_URL": "${JIRA_BASE_URL}"
+    },
+    "required_env": [
+      "JIRA_API_TOKEN",
+      "JIRA_USER_EMAIL",
+      "JIRA_BASE_URL"
+    ],
+    "description": "Jira issue tracking and project management."
+  },
+  "k8s": {
+    "command": "npx",
+    "args": [
+      "kubernetes-mcp"
+    ],
+    "env": {
+      "KUBECONFIG": "${KUBECONFIG}"
+    },
+    "required_env": [
+      "KUBECONFIG"
+    ],
+    "description": "Kubernetes cluster management and operations."
+  },
+  "web_search": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "pskill9/web-search"
+    ],
+    "env": {
+      "GOOGLE_API_KEY": "${GOOGLE_API_KEY}",
+      "GOOGLE_CSE_ID": "${GOOGLE_CSE_ID}"
+    },
+    "required_env": [
+      "GOOGLE_API_KEY",
+      "GOOGLE_CSE_ID"
+    ],
+    "description": "Web searching using Google search results."
+  },
+  "serpapi": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "serpapi-mcp"
+    ],
+    "env": {
+      "SERPAPI_API_KEY": "${SERPAPI_API_KEY}"
+    },
+    "required_env": [
+      "SERPAPI_API_KEY"
+    ],
+    "description": "Search engine results API for Google, Bing, and other search engines."
+  },
+  "ashra": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "getrupt/ashra-mcp"
+    ],
+    "env": {},
+    "required_env": [],
+    "description": "Extract structured data from websites."
+  },
+  "puppeteer": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@modelcontextprotocol/server-puppeteer"
+    ],
+    "env": {},
+    "required_env": [],
+    "description": "Browser automation for web scraping and interaction."
+  },
+  "servers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ],
+      "env": {},
+      "required_env": [],
+      "description": "Browser automation for web testing and interaction."
+    }
+  }
+}

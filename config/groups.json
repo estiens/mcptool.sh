@@ -1,0 +1,34 @@
+[
+  {
+    "name": "search_tools",
+    "servers": ["exa", "fetch", "serpapi"]
+  },
+  {
+    "name": "db",
+    "servers": ["redis", "postgres"]
+  },
+  {
+    "name": "collab", 
+    "servers": ["slack", "github", "jira"]
+  },
+  {
+    "name": "devops",
+    "servers": ["docker", "aws", "terraform", "k8s"]
+  },
+  {
+    "name": "design",
+    "servers": ["figma", "mermaid", "api_spec"]
+  },
+  {
+    "name": "accessibility",
+    "servers": ["a11y", "lighthouse"]
+  },
+  {
+    "name": "automation",
+    "servers": ["n8n", "github", "jira"]
+  },
+  {
+    "name": "scraping",
+    "servers": ["fetch", "puppeteer"]
+  }
+]
